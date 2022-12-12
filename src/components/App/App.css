@@ -1,0 +1,10 @@
+.body {
+    margin: 0;
+    background: #202020;
+    color: #fff;
+}
+
+.app {
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
