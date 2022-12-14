@@ -1,7 +1,7 @@
 import React from 'react';
 import arrow from '../../images/arrow.svg';
 
-function Portfolio(props) {
+function Portfolio() {
   return (
     <div className="portfolio">
       <h2 className="portfolio__title">Портфолио</h2>

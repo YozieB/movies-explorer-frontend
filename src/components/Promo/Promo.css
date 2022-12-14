@@ -44,6 +44,8 @@
 
 .promo__button {
     font-family: inherit;
+    min-width: 129px;
+    min-height: 36px;
     width: 129px;
     height: 36px;
     background: transparent;
