@@ -12,7 +12,7 @@ function Promo() {
           <p className="promo__text">
             Листайте ниже, чтобы узнать больше про этот проект и его создателя.
           </p>
-          <button className="promo__button">Узнать больше</button>
+          <button className="link promo__button">Узнать больше</button>
         </div>
         <img className="promo__image" src={image} alt="Планета" />
       </div>

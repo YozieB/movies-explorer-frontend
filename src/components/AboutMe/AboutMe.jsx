@@ -1,7 +1,7 @@
 import React from 'react';
 import NavTab from '../NavTab/NavTab';
 import image from '../../images/student.jpg';
-function AboutMe(props) {
+function AboutMe() {
   return (
     <div className="student">
       <NavTab title="Студент" />
@@ -19,8 +19,8 @@ function AboutMe(props) {
             постоянную работу на позицию Фронтенд-разработчика.
           </p>
           <a
-            className="student__link"
             href="https://github.com/yozieb"
+            className="link student__link"
             target="_blank"
             rel="noreferrer"
           >

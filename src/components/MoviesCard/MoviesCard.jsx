@@ -1,6 +1,7 @@
 import React from 'react';
 import savedImage from '../../images/saved-movies.svg';
-function MoviesCard({ title, duration, image, isSaved }) {
+import deleteImage from '../../images/delete-movie.svg';
+function MoviesCard({ title, duration, image, isSaved, savedVariant }) {
   return (
     <li className="card">
       <div className="card__header">
@@ -12,9 +13,17 @@ function MoviesCard({ title, duration, image, isSaved }) {
         src={image}
         alt={`Обложка фильма "${title}"`}
       />
-      <button className={`card__button${isSaved ? ' card__button_saved' : ''}`}>
-        {isSaved ? <img src={savedImage} alt="Сохранить" /> : 'Сохранить'}
-      </button>
+      {savedVariant ? (
+        <button className="card__button">
+          <img src={deleteImage} alt="Удалить" />
+        </button>
+      ) : (
+        <button
+          className={`card__button${isSaved ? ' card__button_saved' : ''}`}
+        >
+          {isSaved ? <img src={savedImage} alt="Сохранить" /> : 'Сохранить'}
+        </button>
+      )}
     </li>
   );
 }

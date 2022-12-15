@@ -25,6 +25,7 @@
 }
 
 .search__button {
+    min-width: 44px;
     width: 44px;
     height: 44px;
     border-radius: 5px;
@@ -38,4 +39,21 @@
     width: 100%;
     height: 1px;
     background: #424242;
+}
+
+@media(max-width: 768px) {
+    .search {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media(max-width: 550px) {
+    .search {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .search__input {
+        padding: 13px;
+    }
 }

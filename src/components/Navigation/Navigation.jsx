@@ -22,8 +22,8 @@ function Navigation({ isLogged, isBurgerOpened, handleClose }) {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? 'navigation__list-item navigation__list-item_active'
-                      : 'navigation__list-item'
+                      ? 'link navigation__list-item navigation__list-item_active'
+                      : 'link navigation__list-item'
                   }
                 >
                   Главная
@@ -33,8 +33,8 @@ function Navigation({ isLogged, isBurgerOpened, handleClose }) {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? 'navigation__list-item navigation__list-item_active'
-                      : 'navigation__list-item'
+                      ? 'link navigation__list-item navigation__list-item_active'
+                      : 'link navigation__list-item'
                   }
                   to="/movies"
                 >
@@ -45,8 +45,8 @@ function Navigation({ isLogged, isBurgerOpened, handleClose }) {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? 'navigation__list-item navigation__list-item_active'
-                      : 'navigation__list-item'
+                      ? 'link navigation__list-item navigation__list-item_active'
+                      : 'link navigation__list-item'
                   }
                   to="/saved-movies"
                 >
@@ -56,7 +56,9 @@ function Navigation({ isLogged, isBurgerOpened, handleClose }) {
             </ul>
           </nav>
           <ul className="navigation__profile">
-            <li className="navigation__profile-link">Аккаунт</li>
+            <NavLink className="link navigation__profile-link" to="/profile">
+              Аккаунт
+            </NavLink>
             <li className="navigation__profile-image">
               <img className="navigation__logo" src={profile} alt="Лого" />
             </li>

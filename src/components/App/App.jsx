@@ -12,6 +12,9 @@ import Movies from '../Movies/Movies';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Overlay from '../Overlay/Overlay';
+import SavedMovies from '../SavedMovies/SavedMovies';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import Profile from '../Profile/Profile';
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
@@ -37,41 +40,95 @@ function App() {
   }, [isBurgerOpened]);
   return (
     <div className="app">
-      <Header
-        isLogged={!isLogged}
-        isBurgerOpened={isBurgerOpened}
-        onBurgerClick={handleOpenBurgerMenu}
-        onClose={closeAllPopups}
-      />
       <Routes>
         <Route
           path="/"
           element={
             <Main>
+              <Header
+                isLogged={isLogged}
+                isBurgerOpened={isBurgerOpened}
+                onBurgerClick={handleOpenBurgerMenu}
+                onClose={closeAllPopups}
+              />
               <Promo />
               <AboutProject />
               <Techs />
               <AboutMe />
               <Portfolio />
+              <Footer />
+              <Overlay
+                isLogged={!isLogged}
+                isBurgerOpened={isBurgerOpened}
+                handleClose={closeAllPopups}
+              />
             </Main>
           }
         />
         <Route
           path="/movies"
           element={
-            <Movies>
-              <SearchForm />
-              <MoviesCardList />
-            </Movies>
+            <>
+              <Movies>
+                <Header
+                  isLogged={!isLogged}
+                  isBurgerOpened={isBurgerOpened}
+                  onBurgerClick={handleOpenBurgerMenu}
+                  onClose={closeAllPopups}
+                />
+                <SearchForm />
+                <MoviesCardList savedVariant={false} />
+                <Footer />
+                <Overlay
+                  isLogged={!isLogged}
+                  isBurgerOpened={isBurgerOpened}
+                  handleClose={closeAllPopups}
+                />
+              </Movies>
+            </>
           }
         />
+        <Route
+          path="/saved-movies"
+          element={
+            <SavedMovies>
+              <Header
+                isLogged={!isLogged}
+                isBurgerOpened={isBurgerOpened}
+                onBurgerClick={handleOpenBurgerMenu}
+                onClose={closeAllPopups}
+              />
+              <SearchForm />
+              <MoviesCardList savedVariant={true} />
+              <Footer />
+              <Overlay
+                isLogged={!isLogged}
+                isBurgerOpened={isBurgerOpened}
+                handleClose={closeAllPopups}
+              />
+            </SavedMovies>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Profile name="Владимир" email="pochta@mail.net">
+              <Header
+                isLogged={!isLogged}
+                isBurgerOpened={isBurgerOpened}
+                onBurgerClick={handleOpenBurgerMenu}
+                onClose={closeAllPopups}
+              />
+              <Overlay
+                isLogged={!isLogged}
+                isBurgerOpened={isBurgerOpened}
+                handleClose={closeAllPopups}
+              />
+            </Profile>
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer />
-      <Overlay
-        isLogged={!isLogged}
-        isBurgerOpened={isBurgerOpened}
-        handleClose={closeAllPopups}
-      />
     </div>
   );
 }

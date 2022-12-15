@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FilterCheckbox(props) {
+function FilterCheckbox() {
   return (
     <div className="filter">
       <input className="filter__checkbox" type="checkbox" />

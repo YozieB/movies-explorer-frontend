@@ -33,7 +33,7 @@ const movies = [
     image: testImage,
   },
 ];
-function MoviesCardList() {
+function MoviesCardList({ savedVariant }) {
   return (
     <div className="movies">
       <ul className="movies__list">
@@ -44,6 +44,7 @@ function MoviesCardList() {
             duration={el.duration}
             image={el.image}
             isSaved={el.isSaved}
+            savedVariant={savedVariant}
           />
         ))}
       </ul>
