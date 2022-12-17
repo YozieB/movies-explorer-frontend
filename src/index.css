@@ -18,3 +18,5 @@
 @import url('./components/NotFoundPage/NotFoundPage.css');
 @import url('./components/Profile/Profile.css');
 @import url('./vendor/link.css');
+@import url('./components/EntryComponent/EntryComponent.css');
+@import url('./components/Register/Register.css');

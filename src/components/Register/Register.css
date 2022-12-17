@@ -1,0 +1,138 @@
+.register {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0 30px;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+
+.register__form-field {
+    width: 100%;
+    position: relative;
+}
+
+.register__form-placeholder {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .2s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    color: #8B8B8B;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.register__input {
+    font-family: inherit;
+    box-sizing: border-box;
+    background: transparent;
+    color: #fff;
+    height: 27px;
+    padding-left: 0;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #424242;
+    transition: border-color 0.3s ease;
+    overflow: visible;
+}
+
+.register__input:focus {
+    outline: none;
+    border-color: #4285F4;
+}
+
+.register__input_error:focus {
+    border-color: #EE3465;
+}
+
+.register__input:focus + .register__form-placeholder, .register__input:not(:placeholder-shown) + .register__form-placeholder {
+    transform: translateY(-110%);
+    font-size: 10px;
+    line-height: 12px;
+}
+
+/* Удаляем стандартный фон при сохраненных данных в инпуте */
+
+.register__input:-webkit-autofill,
+.register__input:-webkit-autofill:hover,
+.register__input:-webkit-autofill:focus,
+.register__input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #202020 inset;
+}
+
+.register__input:-webkit-autofill{
+    -webkit-text-fill-color: white;
+}
+
+.register__form-buttons {
+    margin-top: 94px;
+}
+
+.register__form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+}
+
+.register__form-submit {
+    background-color: #4285F4;
+    border-radius: 3px;
+    width: 100%;
+    height: 45px;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color .2s ease, opacity .2s ease;
+    outline: none;
+    border: none;
+}
+
+.register__form-submit:hover {
+    opacity: .8;
+}
+
+.register__form-submit:disabled {
+    background-color: #8B8B8B;
+    outline: none;
+    border: none;
+    cursor: not-allowed;
+}
+
+.register__form-submit:disabled:hover {
+    opacity: 1;
+}
+
+.register__form-check {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #8B8B8B;
+}
+
+.register__form-link {
+    color: #4285F4;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.register__form-error {
+    color: #EE3465;
+    bottom: -15px;
+    left: 0;
+    position: absolute;
+    font-size: 10px;
+    line-height: 12px;
+}

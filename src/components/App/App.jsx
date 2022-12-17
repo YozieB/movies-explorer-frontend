@@ -15,6 +15,8 @@ import Overlay from '../Overlay/Overlay';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Profile from '../Profile/Profile';
+import Register from '../Register/Register';
+import Login from '../Login/Login';
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
@@ -127,6 +129,8 @@ function App() {
             </Profile>
           }
         />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/signin" element={<Login />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
