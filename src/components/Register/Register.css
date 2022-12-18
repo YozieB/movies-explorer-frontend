@@ -126,6 +126,11 @@
     color: #4285F4;
     text-decoration: none;
     font-family: inherit;
+    transition: .2s ease;
+}
+
+.register__form-link:hover {
+    opacity: .8;
 }
 
 .register__form-error {
