@@ -32,7 +32,12 @@
     outline: none;
     border: none;
     cursor: pointer;
-    background-image: url("../../images/search-btn.svg")
+    background-image: url("../../images/search-btn.svg");
+    transition: opacity .2s ease;
+}
+
+.search__button:hover {
+    opacity: .8;
 }
 
 .search__divider {

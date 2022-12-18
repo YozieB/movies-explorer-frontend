@@ -25,6 +25,11 @@
     color: #fff;
     font-family: inherit;
     border: 1px solid #424242;
+    transition: opacity .2s ease;
+}
+
+.movies__button:hover {
+    opacity: .8;
 }
 
 @media(max-width: 768px) {

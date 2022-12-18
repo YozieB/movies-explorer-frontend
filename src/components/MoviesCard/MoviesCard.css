@@ -54,6 +54,11 @@
     outline: none;
     border: none;
     font-family: inherit;
+    transition: opacity .2s ease;
+}
+
+.card__button:hover {
+    opacity: .8;
 }
 
 .card__button_saved {
