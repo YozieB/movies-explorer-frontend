@@ -53,11 +53,13 @@ function App() {
                 onBurgerClick={handleOpenBurgerMenu}
                 onClose={closeAllPopups}
               />
-              <Promo />
-              <AboutProject />
-              <Techs />
-              <AboutMe />
-              <Portfolio />
+              <main>
+                <Promo />
+                <AboutProject />
+                <Techs />
+                <AboutMe />
+                <Portfolio />
+              </main>
               <Footer />
               <Overlay
                 isLogged={!isLogged}
@@ -78,8 +80,10 @@ function App() {
                   onBurgerClick={handleOpenBurgerMenu}
                   onClose={closeAllPopups}
                 />
-                <SearchForm />
-                <MoviesCardList savedVariant={false} />
+                <main>
+                  <SearchForm />
+                  <MoviesCardList savedVariant={false} />
+                </main>
                 <Footer />
                 <Overlay
                   isLogged={!isLogged}
@@ -100,8 +104,10 @@ function App() {
                 onBurgerClick={handleOpenBurgerMenu}
                 onClose={closeAllPopups}
               />
-              <SearchForm />
-              <MoviesCardList savedVariant={true} />
+              <main>
+                <SearchForm />
+                <MoviesCardList savedVariant={true} />
+              </main>
               <Footer />
               <Overlay
                 isLogged={!isLogged}

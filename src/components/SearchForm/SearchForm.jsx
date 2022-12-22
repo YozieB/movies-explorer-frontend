@@ -4,10 +4,10 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 function SearchForm() {
   return (
     <div className="search">
-      <div className="search__field">
-        <input className="search__input" placeholder="Фильм" />
+      <form className="search__field">
+        <input required className="search__input" placeholder="Фильм" />
         <button className="search__button"></button>
-      </div>
+      </form>
       <FilterCheckbox />
       <div className="search__divider"></div>
     </div>
